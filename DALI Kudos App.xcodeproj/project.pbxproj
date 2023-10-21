@@ -8,17 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		8C7F0F6B2ADC830D00DCEBB8 /* DALI_Kudos_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F0F6A2ADC830D00DCEBB8 /* DALI_Kudos_AppApp.swift */; };
-		8C7F0F6D2ADC830D00DCEBB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F0F6C2ADC830D00DCEBB8 /* ContentView.swift */; };
+		8C7F0F6D2ADC830D00DCEBB8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F0F6C2ADC830D00DCEBB8 /* HomeView.swift */; };
 		8C7F0F6F2ADC830D00DCEBB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C7F0F6E2ADC830D00DCEBB8 /* Assets.xcassets */; };
 		8C7F0F722ADC830D00DCEBB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C7F0F712ADC830D00DCEBB8 /* Preview Assets.xcassets */; };
+		8C7F0F792ADC8EC300DCEBB8 /* NewKudos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F0F782ADC8EC300DCEBB8 /* NewKudos.swift */; };
+		8C7F0F7B2ADC8EDB00DCEBB8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F0F7A2ADC8EDB00DCEBB8 /* ProfileView.swift */; };
+		8C7F0F7D2ADCB08700DCEBB8 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F0F7C2ADCB08700DCEBB8 /* PeopleView.swift */; };
+		8C7F0F7F2ADCB5FB00DCEBB8 /* KudosListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F0F7E2ADCB5FB00DCEBB8 /* KudosListElement.swift */; };
+		8C7F0F812ADCB6A100DCEBB8 /* ContentDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F0F802ADCB6A100DCEBB8 /* ContentDataModel.swift */; };
+		8C7F0F832ADCB6CC00DCEBB8 /* Kudos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F0F822ADCB6CC00DCEBB8 /* Kudos.swift */; };
+		8C7F0F872ADCBA5F00DCEBB8 /* dali_social_media.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C7F0F862ADCBA5F00DCEBB8 /* dali_social_media.json */; };
+		8C7F0F892ADCBB3100DCEBB8 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F0F882ADCBB3100DCEBB8 /* Member.swift */; };
+		8C7F0F8D2ADCE75A00DCEBB8 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F0F8C2ADCE75A00DCEBB8 /* RootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C7F0F672ADC830D00DCEBB8 /* DALI Kudos App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DALI Kudos App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7F0F6A2ADC830D00DCEBB8 /* DALI_Kudos_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DALI_Kudos_AppApp.swift; sourceTree = "<group>"; };
-		8C7F0F6C2ADC830D00DCEBB8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8C7F0F6C2ADC830D00DCEBB8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8C7F0F6E2ADC830D00DCEBB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C7F0F712ADC830D00DCEBB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8C7F0F782ADC8EC300DCEBB8 /* NewKudos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewKudos.swift; sourceTree = "<group>"; };
+		8C7F0F7A2ADC8EDB00DCEBB8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		8C7F0F7C2ADCB08700DCEBB8 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
+		8C7F0F7E2ADCB5FB00DCEBB8 /* KudosListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KudosListElement.swift; sourceTree = "<group>"; };
+		8C7F0F802ADCB6A100DCEBB8 /* ContentDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDataModel.swift; sourceTree = "<group>"; };
+		8C7F0F822ADCB6CC00DCEBB8 /* Kudos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kudos.swift; sourceTree = "<group>"; };
+		8C7F0F862ADCBA5F00DCEBB8 /* dali_social_media.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dali_social_media.json; sourceTree = "<group>"; };
+		8C7F0F882ADCBB3100DCEBB8 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		8C7F0F8C2ADCE75A00DCEBB8 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +70,10 @@
 			isa = PBXGroup;
 			children = (
 				8C7F0F6A2ADC830D00DCEBB8 /* DALI_Kudos_AppApp.swift */,
-				8C7F0F6C2ADC830D00DCEBB8 /* ContentView.swift */,
+				8C7F0F8C2ADCE75A00DCEBB8 /* RootView.swift */,
+				8C7F0F852ADCB6F000DCEBB8 /* Home View */,
+				8C7F0F842ADCB6DB00DCEBB8 /* Model */,
+				8C7F0F8E2AE4408900DCEBB8 /* People Views */,
 				8C7F0F6E2ADC830D00DCEBB8 /* Assets.xcassets */,
 				8C7F0F702ADC830D00DCEBB8 /* Preview Content */,
 			);
@@ -65,6 +86,36 @@
 				8C7F0F712ADC830D00DCEBB8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8C7F0F842ADCB6DB00DCEBB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C7F0F862ADCBA5F00DCEBB8 /* dali_social_media.json */,
+				8C7F0F802ADCB6A100DCEBB8 /* ContentDataModel.swift */,
+				8C7F0F822ADCB6CC00DCEBB8 /* Kudos.swift */,
+				8C7F0F882ADCBB3100DCEBB8 /* Member.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8C7F0F852ADCB6F000DCEBB8 /* Home View */ = {
+			isa = PBXGroup;
+			children = (
+				8C7F0F6C2ADC830D00DCEBB8 /* HomeView.swift */,
+				8C7F0F782ADC8EC300DCEBB8 /* NewKudos.swift */,
+				8C7F0F7E2ADCB5FB00DCEBB8 /* KudosListElement.swift */,
+			);
+			path = "Home View";
+			sourceTree = "<group>";
+		};
+		8C7F0F8E2AE4408900DCEBB8 /* People Views */ = {
+			isa = PBXGroup;
+			children = (
+				8C7F0F7A2ADC8EDB00DCEBB8 /* ProfileView.swift */,
+				8C7F0F7C2ADCB08700DCEBB8 /* PeopleView.swift */,
+			);
+			path = "People Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C7F0F872ADCBA5F00DCEBB8 /* dali_social_media.json in Resources */,
 				8C7F0F722ADC830D00DCEBB8 /* Preview Assets.xcassets in Resources */,
 				8C7F0F6F2ADC830D00DCEBB8 /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +189,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C7F0F6D2ADC830D00DCEBB8 /* ContentView.swift in Sources */,
+				8C7F0F812ADCB6A100DCEBB8 /* ContentDataModel.swift in Sources */,
+				8C7F0F6D2ADC830D00DCEBB8 /* HomeView.swift in Sources */,
+				8C7F0F7D2ADCB08700DCEBB8 /* PeopleView.swift in Sources */,
+				8C7F0F792ADC8EC300DCEBB8 /* NewKudos.swift in Sources */,
+				8C7F0F892ADCBB3100DCEBB8 /* Member.swift in Sources */,
+				8C7F0F832ADCB6CC00DCEBB8 /* Kudos.swift in Sources */,
+				8C7F0F7F2ADCB5FB00DCEBB8 /* KudosListElement.swift in Sources */,
 				8C7F0F6B2ADC830D00DCEBB8 /* DALI_Kudos_AppApp.swift in Sources */,
+				8C7F0F7B2ADC8EDB00DCEBB8 /* ProfileView.swift in Sources */,
+				8C7F0F8D2ADCE75A00DCEBB8 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

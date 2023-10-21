@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct DALI_Kudos_AppApp: App {
+    
+    @ObservedObject var contentDataModel = ContentDataModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView(user: contentDataModel.user)
+                .environmentObject(contentDataModel)
         }
+
     }
 }
