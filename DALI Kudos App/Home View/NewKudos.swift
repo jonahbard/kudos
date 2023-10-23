@@ -18,7 +18,7 @@ struct NewKudos: View {
     @State var type = "gratitude"
     @State var to = ""
     @State var text = ""
-    let kudosTypes = ["gratitude", "love", "support", "praise"]
+    let kudosTypes = ["gratitude", "approval", "support", "praise"]
     
     func checkForPerson(person: String) -> Member? {
         return contentDataModel.members.first { member in
