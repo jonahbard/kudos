@@ -20,9 +20,9 @@ struct NewKudos: View {
     @State var text = ""
     let kudosTypes = ["gratitude", "approval", "support", "praise"]
     
-    func checkForPerson(person: String) -> Member? {
+    func checkForPerson(person: String) -> Member? { // return first instance with matching name
         return contentDataModel.members.first { member in
-            person == member.name
+            person.lowercased() == member.name!.lowercased() //works even when input is not capitalized
         }
     }
     
@@ -30,12 +30,12 @@ struct NewKudos: View {
         NavigationStack {
             Form {
                 // input fields
-                Section(){
+                Section(){ //everything is in 1 section
                     VStack {
                         Image(type)
                             .padding()
                             .shadow(radius: 5)
-                        Picker(selection: $type) {
+                        Picker(selection: $type) { //kudos type selector
                             ForEach(kudosTypes, id: \.self) {
                                 Text($0)
                                     .fontWeight(.medium)
@@ -48,7 +48,7 @@ struct NewKudos: View {
                     }
                     HStack {
                         Spacer()
-                        Text("to:")
+                        Text("to:") //receiver
                             .font(.title3).fontWeight(.medium)
                             .padding(7)
                         TextField("full name" , text: $to)
@@ -57,20 +57,13 @@ struct NewKudos: View {
                     }
                     HStack {
                         Spacer()
-                        Text("for:")
+                        Text("for:") //sender
                             .font(.title3).fontWeight(.medium)
                             .padding(7)
                         TextField("what?" , text: $text)
                             .font(.title3).fontWeight(.medium)
                             .foregroundColor(.gray)
                     }
-                    
-                        
-
-                    
-                }
-                Section {
-                    
                 }
             }
             .navigationBarTitle("new kudos")
@@ -78,10 +71,11 @@ struct NewKudos: View {
                 ToolbarItem(placement: .navigationBarTrailing, content: {
                     Button("send!"){
                         let receiver = checkForPerson(person: to)
-                        if receiver == nil {
+                        if receiver == nil { //name is not correct
                             wrongNameDialogPresented = true
-                        } else if text != "" {
+                        } else if text != "" { //only send if there's a name
                             contentDataModel.allKudos.insert(Kudos(type: type, text: text, from: contentDataModel.user, to: receiver!), at: 0)
+                            print("sent!")
                             dismiss()
                         }
                     }

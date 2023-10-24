@@ -14,7 +14,7 @@ struct RootView: View {
     
     
     var body: some View {
-        TabView {
+        TabView { // tab view containing each screen
             HomeView()
                 .environmentObject(contentDataModel)
                 .tabItem {

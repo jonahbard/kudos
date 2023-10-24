@@ -28,7 +28,7 @@ struct Member: Identifiable, Codable, Hashable {
     let funFact: String?
     let picture: String?
     
-    enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey { //the keys that it looks for in JSON
         case name, year, dev, des, pm, core, mentor, major, minor, birthday, home, quote, picture
         case favoriteThing1 = "favorite thing 1"
         case favoriteThing2 = "favorite thing 2"

@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-extension String {
-    func convertBirthdayFormat() -> String {
+extension String { 
+    func convertBirthdayFormat() -> String { //extension that formats "03-10" to "March 10"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM-dd"
-        guard let date = dateFormatter.date(from: self) else { return "N/A" }
+        guard let date = dateFormatter.date(from: self) else { return "N/A" } //cancel if not valid
         dateFormatter.dateFormat = "MMMM dd"
         return dateFormatter.string(from: date)
     }
@@ -26,6 +26,7 @@ struct ProfileView: View {
     let genericPhoto = "https://www.digitary.net/wp-content/uploads/2021/07/Generic-Profile-Image.png"
 
     func loadRoles() -> [Text] {
+        //loads roles into a list of Text views. much nicer than doing this logic inline
         var rolesList = [Text]()
         if member.core ?? false {
             rolesList.append(Text("• core team").foregroundColor(.orange))}
@@ -46,14 +47,15 @@ struct ProfileView: View {
             NavigationStack {
                 VStack () {
                     HStack {
+                        //if photo doesn't exist, load generic photo
                         AsyncImage(url: URL(string: member.picture ?? genericPhoto)) { image in
                             image
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .clipShape(Circle())
-                        } placeholder : {
+                        } placeholder : { //while loading image is loading (need to add cache so it doesn't always take forever) put a grey circle there
                             Circle()
-                                .foregroundColor(.gray)
+                                .foregroundColor(.gray).opacity(0.5)
                         }
                         .padding(EdgeInsets(top: 30, leading: 40, bottom: 20, trailing: 10))
                         VStack(alignment: .leading) {
@@ -61,9 +63,11 @@ struct ProfileView: View {
                                 .font(.title2)
                                 .bold()
                                 .padding(EdgeInsets(top: 10, leading: 0, bottom: 3, trailing: 0))
+                            //GR= graduate, otherwise "class of ..."
                             Text(member.year! != "GR" ? ("class of " + member.year!) : ("graduate"))
                                 .foregroundColor(.gray)
                                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 3, trailing: 0))
+                            //load roles from the role list function
                             ForEach(0..<loadRoles().count, id: \.self) { i in
                                 loadRoles()[i]
                             }
@@ -82,6 +86,8 @@ struct ProfileView: View {
                         ScrollView {
                             VStack(alignment: .leading) {
                                 Group {
+                                    ///TODO at some point: take these out into another text field compilation method like the roles one.
+                                    ///don't add the field to the list if it has nil value.
                                     Group {
                                         Text("Major: ")
                                             .bold() +
@@ -116,7 +122,7 @@ struct ProfileView: View {
                                     }
                                 }
                                 .padding(EdgeInsets(top: 0, leading: 50, bottom: 10, trailing: 0))
-                                Group {
+                                Group { // put a bullet in front of each thing to cop out of comma grammar issues
                                     Text("Favorite things: ")
                                         .bold()
                                         .padding(.bottom, -10)
@@ -135,7 +141,6 @@ struct ProfileView: View {
                                 }
                                 .padding(EdgeInsets(top: 0, leading: 50, bottom: 10, trailing: 0))
 
-                                
                             }.frame(width: abs(geometry.size.width - 50), alignment: .leading)
                         }
                         .padding(.bottom, 30)
@@ -143,6 +148,7 @@ struct ProfileView: View {
                     }
                     Spacer()
                 }
+                //my profile or someone else's profile?
                 .navigationBarTitle(member.name == contentDataModel.user.name ? "my profile" : "profile")
             }
         }

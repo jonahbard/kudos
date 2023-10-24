@@ -31,12 +31,14 @@ struct PeopleView: View {
                             .environmentObject(contentDataModel)
                     } label: {
                         HStack {
+                            ///todo: make this a method that all views can call + make genericPhoto globally accessible variable
+                            //Image loader same as in profile view. if image doesn't exist load generic photo
                             AsyncImage(url: URL(string: member.picture ?? genericPhoto)) { image in
                                 image
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .clipShape(Circle())
-                            } placeholder : {
+                            } placeholder : { //grey circle while loading
                                 Circle()
                                     .foregroundColor(.gray)
                             }

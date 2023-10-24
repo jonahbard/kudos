@@ -15,9 +15,10 @@ struct HomeView: View {
     
     var body: some View {
             NavigationView {
-                List {
+                List { // list of all kudos, formatted as KudosListElement
                     ForEach(0..<contentDataModel.allKudos.count, id: \.self) { index in
-                        HStack{                            KudosListElement(kudos: contentDataModel.allKudos[index])
+                        HStack{
+                            KudosListElement(kudos: contentDataModel.allKudos[index])
                                 .padding(.top, 20)
                                 .padding(.bottom, 20)
                             Spacer()
@@ -28,7 +29,7 @@ struct HomeView: View {
                     
                     .navigationBarTitle("kudos", displayMode: .large)
             }
-            .overlay(alignment: .bottomTrailing){
+            .overlay(alignment: .bottomTrailing){ //new kudos overlay
                 Button(
                     action: {
                         newKudosSheetPresented = true
@@ -39,20 +40,16 @@ struct HomeView: View {
                                 .padding()
                                 .foregroundColor(.pink)
                                 .shadow(radius: 10)
-                                
-                            
-                            
                             VStack {
-                                Text("+")
+                                Image(systemName: "arrow.up.heart")
                                     .foregroundColor(.white)
                                     .font(.largeTitle)
-                                    .frame(width: 75, height: 75)
+                                    .frame(width: 75, height: 80)
                                     .padding(15)
                             }
-                                
                         }
                         .frame(width: 75, height: 75)
-                        .padding(50)
+                        .padding(30)
                     }
                 )
             }
