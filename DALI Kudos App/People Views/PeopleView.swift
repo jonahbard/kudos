@@ -40,7 +40,7 @@ struct PeopleView: View {
                                     .clipShape(Circle())
                             } placeholder : { //grey circle while loading
                                 Circle()
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(.gray).opacity(0.5)
                             }
                             .frame(width:44, height: 44)
                             
